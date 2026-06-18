@@ -1,0 +1,41 @@
+// ===== ヘッダー（ヒーローセクション） =====
+.site-header {
+  background: linear-gradient(
+    120deg,
+    #4a9e8e,
+    #7b6fa0,
+    #a06b8a,
+    #a07a4a,
+    #4a7fa0,
+    #6b9e70,
+    #4a9e8e
+  );
+  background-size: 300% 300%;
+  animation: heroGradientShift 20s ease infinite;
+}
+
+.hero {
+  color: #ffffff;
+  max-width: 1400px;
+  height: 33vh;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+
+  &-title {
+    font-weight: bold;
+    margin: 36px 0;
+    line-height: 1.3;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  &-detail {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}

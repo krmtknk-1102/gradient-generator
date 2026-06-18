@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グラデーションサムネメーカー｜無料のOGP・サムネイル・アイキャッチ画像作成ツール</title>
+  <meta name="description" content="シンプルなグラデーション背景のサムネイル・OGP画像をブラウザ上で無料作成。画像不要、テキストとカラーを選ぶだけでPNG画像をダウンロードできます。">
+  <meta name="keywords" content="サムネイル作成,OGP画像,アイキャッチ,グラデーション,無料,WordPress,Qiita,Zenn,はてなブログ,画像作成ツール,メーカー,画像">
+  <link rel="canonical" href="https://gradient-generator.hibitsuiki.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <!-- iOSのホーム画面追加用 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_ios.png">
+
+  <meta property="og:title" content="グラデーションサムネメーカー｜無料のOGP・サムネイル画像作成ツール">
+  <meta property="og:description" content="画像不要、テキストとカラーを選ぶだけ。シンプルなグラデーションのサムネイル・OGP画像を無料で作成できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gradient-generator.hibitsuiki.com/">
+  <meta property="og:image" content="https://gradient-generator.hibitsuiki.com/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  </noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "グラデーションサムネメーカー",
+    "description": "テキストとカラーを選ぶだけでシンプルなグラデーション背景のサムネイル・OGP画像を無料作成できるツール",
+    "url": "https://gradient-generator.hibitsuiki.com/",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "inLanguage": "ja"
+  }
+  </script>
+</head>
+
+<body>
+<nav class="site-nav" id="siteNav">
+  <div class="site-nav-inner">
+    <ul class="site-nav-links" id="navLinks">
+      <!-- <li><a href="#howto">使い方</a></li> -->
+      <li><a href="#request">ご要望</a></li>
+      <li><a href="#release">リリースノート</a></li>
+      <li><a href="#contact">管理者について</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="ダークモードに切り替え">
+        <!-- 太陽アイコン（ライトモードに切り替えるとき表示） -->
+        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2"  x2="12" y2="5"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="2"  y1="12" x2="5"  y2="12"/>
+          <line x1="19" y1="12" x2="22" y2="12"/>
+          <line x1="4.22"  y1="4.22"  x2="6.34"  y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+          <line x1="4.22"  y1="19.78" x2="6.34"  y2="17.66"/>
+          <line x1="17.66" y1="6.34"  x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- 月アイコン（ダークモードに切り替えるとき表示） -->
+        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <!-- ハンバーガーボタン（スマホのみ表示） -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="hero" id="hero">
+    <p class="hero-sub">ちょっとおしゃれで、ちょうどいい―――。</p>
+    <h1 class="hero-title">グラデーションサムネメーカー</h1>
+    <p class="hero-detail">カラーとテキストを選ぶだけ。<br>
+      シンプルなグラデーション背景のサムネイル・OGP画像を無料作成できます。<br>
+      アカウント登録不要｜このブラウザ上でダウンロードまで完結</p>
+  </div>
+</header>
+
+<!-- ナビが fixed になったときのガタつき防止スペーサー -->
+<div class="nav-spacer" id="navSpacer"></div>
+
+<main class="app">
+  <!-- 左カラム：カラー・グラデ・サイズ・角丸 -->
+  <section class="panel" aria-label="カラー・グラデ・サイズ・角丸">
+    <h2 class="panel-title">カラー設定</h2>
+    <div class="field"><label>カラー 1</label>
+      <div class="color-row"><div class="color-swatch-wrap" id="swatch1"><div class="color-swatch" id="swatchDisplay1"></div><input type="color" id="color1" value="#6b9e94"></div><input class="hex-input" id="hex1" value="#6b9e94" maxlength="7"></div>
+    </div>
+    <div class="field"><label>カラー 2</label>
+      <div class="color-row"><div class="color-swatch-wrap" id="swatch2"><div class="color-swatch" id="swatchDisplay2"></div><input type="color" id="color2" value="#3d5a52"></div><input class="hex-input" id="hex2" value="#3d5a52" maxlength="7"></div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2 class="panel-title">グラデーションスタイル</h2>
+    <div class="grad-type-grid" id="gradTypeGrid"></div>
+    <div id="angleSection">
+      <span style="font-size:12px;color:var(--text-secondary);">方向</span>
+      <div class="direction-grid" id="dirGrid">
+        <button class="dir-btn" data-angle="315">↖</button><button class="dir-btn" data-angle="0">↑</button><button class="dir-btn" data-angle="45">↗</button>
+        <button class="dir-btn" data-angle="270">←</button><button class="dir-btn" data-angle="135" style="font-size:11px;color:var(--text-tertiary);">●</button><button class="dir-btn" data-angle="90">→</button>
+        <button class="dir-btn" data-angle="225">↙</button><button class="dir-btn" data-angle="180">↓</button><button class="dir-btn" data-angle="135">↘</button>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2 class="panel-title">画像サイズ</h2>
+    <div class="size-row">
+      <input class="size-input" type="number" id="imgW" value="1200" min="50" max="4000">
+      <span class="size-sep">×</span>
+      <input class="size-input" type="number" id="imgH" value="630" min="50" max="4000">
+      <span class="size-sep" style="font-size:12px;color:var(--text-tertiary);">px</span>
+    </div>
+    <div class="preset-grid">
+      <button class="preset-btn" data-w="1200" data-h="630"><span class="preset-dot" style="background:linear-gradient(90deg,#6b9e94,#3d5a52)"></span>OGP 1200×630</button>
+      <button class="preset-btn" data-w="1920" data-h="1080"><span class="preset-dot" style="background:linear-gradient(90deg,#6b9e94,#3d5a52)"></span>FHD 1920×1080</button>
+      <button class="preset-btn" data-w="800" data-h="600"><span class="preset-dot" style="background:linear-gradient(90deg,#6b9e94,#3d5a52)"></span>800×600</button>
+      <button class="preset-btn" data-w="1080" data-h="1080"><span class="preset-dot" style="background:linear-gradient(90deg,#6b9e94,#3d5a52)"></span>正方形 1080</button>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="toggle-row">
+      <h2 class="panel-title">角丸長方形</h2>
+      <label class="toggle"><input type="checkbox" id="rectToggle" checked><div class="toggle-track"></div><div class="toggle-thumb"></div></label>
+    </div>
+    <div id="rectSettings" style="display:flex;flex-direction:column;gap:14px;">
+      <div class="field"><label>塗りつぶしパターン</label>
+        <div class="pattern-grid" id="patternGrid"></div>
+      </div>
+      <div class="field"><label>背景カラー</label>
+        <div class="color-row"><div class="color-swatch-wrap" id="swatch3"><div class="color-swatch" id="swatchDisplay3"></div><input type="color" id="color3" value="#ffffff"></div><input class="hex-input" id="hex3" value="#ffffff" maxlength="7"></div>
+      </div>
+      <div class="field" id="patColorField"><label>パターンカラー</label>
+        <div class="color-row"><div class="color-swatch-wrap" id="swatch5"><div class="color-swatch" id="swatchDisplay5"></div><input type="color" id="color5" value="#3d5a52"></div><input class="hex-input" id="hex5" value="#3d5a52" maxlength="7"></div>
+      </div>
+      <div class="slider-row"><div class="slider-header"><label>余白</label><span class="slider-val" id="marginVal">60px</span></div><input type="range" id="marginSlider" min="10" max="200" step="1" value="60"></div>
+      <div class="slider-row"><div class="slider-header"><label>角丸の大きさ</label><span class="slider-val" id="radiusVal">40px</span></div><input type="range" id="radiusSlider" min="0" max="200" step="1" value="40"></div>
+      <div class="slider-row"><div class="slider-header"><label>不透明度</label><span class="slider-val" id="opacityVal">100%</span></div><input type="range" id="opacitySlider" min="0" max="100" step="1" value="100"></div>
+      <div class="slider-row"><div class="slider-header"><label>パターン濃度</label><span class="slider-val" id="patternOpacityVal">100%</span></div><input type="range" id="patternOpacitySlider" min="0" max="100" step="1" value="100"></div>
+    </div>
+  </section>
+
+  <!-- 中央カラム：テキスト -->
+  <section class="panel" aria-label="テキスト">
+    <div class="toggle-row">
+      <h2 class="panel-title">テキスト</h2>
+      <label class="toggle"><input type="checkbox" id="textToggle" checked><div class="toggle-track"></div><div class="toggle-thumb"></div></label>
+    </div>
+    <div id="textSettings" style="display:flex;flex-direction:column;gap:14px;">
+      <div class="field"><label>テキスト入力</label><textarea id="textInput" rows="3">サムネイルタイトル</textarea></div>
+      <div class="field"><label>フォント</label><div class="font-grid" id="fontGrid"></div></div>
+      <div class="field">
+        <label>スタイル・揃え</label>
+        <div class="icon-btn-row">
+          <button class="icon-btn bold-btn" id="boldBtn" title="太字">B</button>
+          <div style="width:0.5px;height:24px;background:var(--border);margin:0 2px;"></div>
+          <button class="icon-btn" id="alignLeft" data-align="left" title="左揃え"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="1.5" rx=".75" fill="currentColor"/><rect x="1" y="7" width="10" height="1.5" rx=".75" fill="currentColor"/><rect x="1" y="11" width="12" height="1.5" rx=".75" fill="currentColor"/></svg></button>
+          <button class="icon-btn active" id="alignCenter" data-align="center" title="中央揃え"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="1.5" rx=".75" fill="currentColor"/><rect x="3" y="7" width="10" height="1.5" rx=".75" fill="currentColor"/><rect x="2" y="11" width="12" height="1.5" rx=".75" fill="currentColor"/></svg></button>
+          <button class="icon-btn" id="alignRight" data-align="right" title="右揃え"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="1.5" rx=".75" fill="currentColor"/><rect x="5" y="7" width="10" height="1.5" rx=".75" fill="currentColor"/><rect x="3" y="11" width="12" height="1.5" rx=".75" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+      <div class="slider-row"><div class="slider-header"><label>文字サイズ</label><span class="slider-val" id="fontSizeVal">80px</span></div><input type="range" id="fontSizeSlider" min="20" max="300" step="2" value="80"></div>
+      <div class="field"><label>文字カラー</label>
+        <div class="color-row"><div class="color-swatch-wrap" id="swatch4"><div class="color-swatch" id="swatchDisplay4"></div><input type="color" id="color4" value="#1a1a2e"></div><input class="hex-input" id="hex4" value="#1a1a2e" maxlength="7"></div>
+      </div>
+      <div class="slider-row"><div class="slider-header"><label>行間</label><span class="slider-val" id="lineHeightVal">1.4</span></div><input type="range" id="lineHeightSlider" min="10" max="30" step="1" value="14"></div>
+    </div>
+  </section>
+
+  <!-- 右カラム：プレビュー -->
+  <section class="preview-area" aria-label="プレビュー・使い方">
+    <h2 class="visually-hidden">プレビュー</h2>
+    <div class="canvas-wrap"><canvas id="previewCanvas"></canvas></div>
+    <div class="info-bar">
+      <span class="size-label" id="sizeLabel">1200 × 630 px</span>
+      <button class="dl-btn" id="dlBtn">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ダウンロード
+      </button>
+    </div>
+
+    <div class="how-to">
+      <h2 class="how-to-title">使い方</h2>
+      <ol class="how-to-steps">
+        <li class="how-to-step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-text">
+            <h3>カラーを選ぶ</h3>
+            カラー1・2を設定してグラデーションの色を決めます。
+          </div>
+        </li>
+        <li class="how-to-step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-text">
+            <h3>スタイルを選ぶ</h3>
+            グラデーションの種類・方向、背景パターンを選びます。
+          </div>
+        </li>
+        <li class="how-to-step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-text">
+            <h3>テキストを入力する</h3>
+            フォントやサイズを調整しながらタイトルを入力します。
+          </div>
+        </li>
+        <li class="how-to-step">
+          <div class="step-num" aria-hidden="true">4</div>
+          <div class="step-text">
+            <h3>ダウンロードする</h3>
+            プレビューを確認してダウンロードボタンを押すだけ。
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  © 2026 グラデーションサムネメーカー ・ 無料で使えるOGP・サムネイル画像作成ツール
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

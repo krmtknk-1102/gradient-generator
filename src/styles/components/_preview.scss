@@ -1,0 +1,121 @@
+@use '../variables' as *;
+
+// ===== プレビューエリア =====
+.preview-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 72px;
+}
+
+.canvas-wrap {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  background: var(--input-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+#previewCanvas {
+  display: block;
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.size-label {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+// ===== ダウンロードボタン =====
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel-bg);
+  border: 0.5px solid var(--border-hover);
+  border-radius: $radius-md;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-primary);
+
+  &:hover {
+    background: var(--input-bg);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// ===== 使い方 =====
+.how-to {
+  background: var(--panel-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-lg;
+  padding: 1.25rem 1.5rem;
+
+  &-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  &-steps {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+  }
+
+  &-step {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+.step-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--panel-bg);
+  background: var(--text-secondary);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+
+  h3 {
+    display: block;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+}

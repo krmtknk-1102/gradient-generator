@@ -1,0 +1,107 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ===== 画像サイズ =====
+.size-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.size-input {
+  width: 72px;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  background: var(--input-bg);
+  color: var(--text-primary);
+
+  &:focus-visible {
+    outline: 2px solid var(--border-hover);
+    outline-offset: 2px;
+  }
+}
+
+.size-sep {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+// ===== プリセット =====
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.preset-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 7px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+
+  @include btn-hover-with-color;
+}
+
+.preset-dot {
+  width: 28px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+// ===== テキストスタイル・揃え =====
+.icon-btn-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 7px 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 44px;
+
+  @include btn-hover-with-color;
+  @include btn-active-state;
+
+  &.bold-btn {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+textarea {
+  resize: vertical;
+  padding: 8px;
+  font-size: 13px;
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-hover);
+    outline-offset: 2px;
+  }
+}

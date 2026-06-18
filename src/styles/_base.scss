@@ -1,0 +1,105 @@
+@use 'variables' as *;
+
+// ===== リセット =====
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ===== 変数 =====
+:root {
+  --bg: #e8e4dc;
+  --panel-bg: #ffffff;
+  --border: #e2e2de;
+  --border-hover: #c8c8c4;
+  --text-primary: #1a1a18;
+  --text-secondary: #6b6b68;
+  --text-tertiary: #a0a09e;
+  --input-bg: #eeece8;
+}
+
+// ===== ダークモード（OS設定） =====
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a18;
+    --panel-bg: #242422;
+    --border: #383836;
+    --border-hover: #505050;
+    --text-primary: #f0f0ee;
+    --text-secondary: #909090;
+    --text-tertiary: #606060;
+    --input-bg: #2e2e2c;
+  }
+}
+
+// ===== ダークモード（トグルで手動指定） =====
+[data-theme="dark"] {
+  --bg: #1a1a18;
+  --panel-bg: #242422;
+  --border: #383836;
+  --border-hover: #505050;
+  --text-primary: #f0f0ee;
+  --text-secondary: #909090;
+  --text-tertiary: #606060;
+  --input-bg: #2e2e2c;
+}
+
+// ===== ライトモード（トグルで手動指定） =====
+[data-theme="light"] {
+  --bg: #e8e4dc;
+  --panel-bg: #ffffff;
+  --border: #e2e2de;
+  --border-hover: #c8c8c4;
+  --text-primary: #1a1a18;
+  --text-secondary: #6b6b68;
+  --text-tertiary: #a0a09e;
+  --input-bg: #eeece8;
+}
+
+// ===== ベースレイアウト =====
+body {
+  font-family: 'Noto Sans JP', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 260px 220px 1fr;
+  gap: 20px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// ===== ユーティリティ =====
+button:focus-visible {
+  outline: 2px solid var(--border-hover);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.disabled-overlay {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+#angleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

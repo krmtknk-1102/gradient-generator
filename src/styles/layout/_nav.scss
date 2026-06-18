@@ -1,0 +1,131 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ===== ナビ =====
+.site-nav {
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.is-sticky,
+  &.is-open {
+    background: $nav-gradient-bg;
+    background-size: 300% 300%;
+    animation: slideDown 0.3s ease forwards, heroGradientShift 20s ease infinite;
+    backdrop-filter: blur(8px);
+  }
+
+  &-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8px 10px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin-right: 24px;
+
+    a {
+      color: #e0f0ed;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-spacer {
+  display: none;
+}
+
+// ===== テーマ切り替えボタン =====
+.theme-toggle-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0.5px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+
+  @include btn-hover-with-color;
+}
+
+// ===== ハンバーガーボタン =====
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 4px;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.is-open {
+    span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  }
+}
+
+// ===== アニメーション =====
+@keyframes heroGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

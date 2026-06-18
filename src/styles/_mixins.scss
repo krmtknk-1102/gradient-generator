@@ -1,0 +1,36 @@
+// ===== ホバー =====
+@mixin btn-hover {
+  &:hover {
+    border-color: var(--border-hover);
+  }
+}
+
+@mixin btn-hover-with-color {
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
+}
+
+// ===== アクティブ =====
+@mixin btn-active-outline {
+  &.active {
+    border: 2px solid var(--text-primary);
+  }
+}
+
+@mixin btn-active-selected {
+  &.active {
+    background: var(--panel-bg);
+    border: 2px solid var(--text-primary);
+  }
+}
+
+@mixin btn-active-state {
+  &.active {
+    background: var(--panel-bg);
+    border-color: var(--text-secondary);
+    box-shadow: 0 0 0 1.5px var(--text-secondary);
+    color: var(--text-primary);
+  }
+}

@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+@media (max-width: $bp-tablet) {
+  // ===== ベース =====
+  .app {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  // ===== ベース =====
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  // ===== プレビューエリア =====
+  .preview-area {
+    position: static;
+  }
+
+  // ===== ナビ =====
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .site-nav-inner {
+    margin: 4px auto;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .site-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 8px 0 12px;
+
+    &.is-open {
+      display: flex;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      padding: 10px 0;
+      font-size: 0.95rem;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .site-nav.is-open {
+    animation: heroGradientShift 20s ease infinite;
+  }
+
+  // ===== ヒーローセクション =====
+  .hero {
+    padding-top: 36px;
+
+    &-title {
+      font-size: 1.4rem;
+      margin: 12px 0;
+    }
+
+    &-sub {
+      font-size: 1rem;
+    }
+
+    &-detail {
+      font-size: 0.8rem;
+    }
+  }
+
+  // ===== ダウンロードボタン =====
+  .dl-btn {
+    min-height: 44px;
+  }
+}

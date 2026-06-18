@@ -1,0 +1,66 @@
+@use '../variables' as *;
+
+// ===== フィールド =====
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+}
+
+// ===== カラーピッカー =====
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-swatch-wrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  cursor: pointer;
+  flex-shrink: 0;
+
+  input[type="color"] {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+
+.color-swatch {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+// ===== HEX入力 =====
+.hex-input {
+  font-size: 13px;
+  font-family: monospace;
+  padding: 6px 10px;
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  width: 105px;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-hover);
+    outline-offset: 1px;
+  }
+}

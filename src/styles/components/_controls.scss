@@ -1,0 +1,132 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ===== グラデーション選択 =====
+.grad-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.grad-type-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 2/1;
+  position: relative;
+
+  @include btn-hover;
+  @include btn-active-outline;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.grad-type-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 3px 4px;
+  background: rgba(0, 0, 0, 0.38);
+  pointer-events: none;
+}
+
+// ===== 方向ボタン =====
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.dir-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 7px 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  min-height: 44px;
+
+  @include btn-hover;
+  @include btn-active-state;
+}
+
+// ===== パターン選択 =====
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.pat-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  @include btn-hover;
+  @include btn-active-outline;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.pat-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 9px;
+  text-align: center;
+  padding: 2px 3px;
+  background: rgba(0, 0, 0, 0.32);
+  color: #fff;
+  pointer-events: none;
+}
+
+// ===== フォント選択 =====
+.font-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.font-btn {
+  background: var(--input-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include btn-hover;
+  @include btn-active-selected;
+}
+
+.font-tag {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
