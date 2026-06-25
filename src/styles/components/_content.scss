@@ -1,0 +1,130 @@
+@use '../variables' as *;
+
+// ===== コンテンツセクション共通 =====
+.content-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-top: 0.5px solid var(--border);
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  &__lead {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// ===== 用途グリッド =====
+.usecases-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.usecase-item {
+  background: var(--panel-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  &__desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+}
+
+// ===== セクション見出し（グラデーションアニメーション） =====
+#faq,
+[aria-labelledby="usecases-heading"] {
+  border-top: none;
+
+  .content-section__title {
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(
+      120deg,
+      #4a9e8e,
+      #7b6fa0,
+      #a06b8a,
+      #a07a4a,
+      #4a7fa0,
+      #6b9e70,
+      #4a9e8e
+    );
+    background-size: 300% 300%;
+    animation: heroGradientShift 20s ease infinite;
+    margin: -2.5rem -2rem 1.5rem;
+    padding: 1.75rem 2rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+// ===== FAQ =====
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faq-item {
+  background: var(--panel-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    list-style: none;
+    gap: 16px;
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+  }
+
+  &[open] > summary::after {
+    transform: rotate(45deg);
+  }
+}
+
+.faq-answer {
+  padding: 0.75rem 1.25rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  border-top: 0.5px solid var(--border);
+}

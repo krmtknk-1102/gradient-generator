@@ -5,6 +5,11 @@
   .app {
     grid-template-columns: 1fr 1fr;
   }
+
+  // ===== 用途グリッド =====
+  .usecases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: $bp-mobile) {
@@ -74,5 +79,30 @@
   // ===== ダウンロードボタン =====
   .dl-btn {
     min-height: 44px;
+  }
+
+  // ===== コンテンツセクション =====
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .usecases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  // ===== セクション見出し =====
+  #faq .content-section__title,
+  [aria-labelledby="usecases-heading"] .content-section__title {
+    margin: -2rem -1rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  // ===== お問い合わせページ =====
+  .contact-wrap {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
   }
 }

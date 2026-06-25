@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ご要望・お問い合わせ｜グラデーションサムネメーカー</title>
+  <meta name="description" content="グラデーションサムネメーカーへのご要望・バグ報告・ご感想はこちらからどうぞ。">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://gradient-generator.hibitsuiki.com/contact.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_ios.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R7SQ29EZJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2R7SQ29EZJ');
+  </script>
+</head>
+
+<body>
+<nav class="site-nav" id="siteNav">
+  <div class="site-nav-inner">
+    <ul class="site-nav-links" id="navLinks">
+      <li><a href="/contact.html">ご要望</a></li>
+      <li><a href="https://www.hibitsuiki.com/category/release_notes/gradient_generator/" target="_blank" rel="noopener noreferrer">リリースノート</a></li>
+      <li><a href="https://www.hibitsuiki.com/profile/" target="_blank" rel="noopener noreferrer">管理者について</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="ダークモードに切り替え">
+        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2"  x2="12" y2="5"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="2"  y1="12" x2="5"  y2="12"/>
+          <line x1="19" y1="12" x2="22" y2="12"/>
+          <line x1="4.22"  y1="4.22"  x2="6.34"  y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+          <line x1="4.22"  y1="19.78" x2="6.34"  y2="17.66"/>
+          <line x1="17.66" y1="6.34"  x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="hero" id="hero">
+    <h1 class="hero-title">ご要望・お問い合わせ</h1>
+    <p class="hero-detail">機能リクエスト・バグ報告・ご感想など、何でもお気軽にどうぞ。</p>
+  </div>
+</header>
+
+<div class="nav-spacer" id="navSpacer"></div>
+
+<main>
+  <div class="contact-wrap">
+    <a href="/" class="contact-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      ツールに戻る
+    </a>
+
+    <div class="contact-card">
+      <form id="contactForm">
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div class="form-group">
+            <label for="fieldType">お問い合わせの種別<span class="form-required">必須</span></label>
+            <select class="form-input" id="fieldType" required>
+              <option value="">選択してください</option>
+              <option value="機能リクエスト">機能リクエスト</option>
+              <option value="バグ報告">バグ報告</option>
+              <option value="ご感想">ご感想</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fieldMessage">お問い合わせ内容<span class="form-required">必須</span></label>
+            <textarea class="form-input" id="fieldMessage" rows="6" placeholder="内容をご記入ください" required maxlength="1000"></textarea>
+            <p class="form-hint">1000文字以内</p>
+          </div>
+
+          <div class="form-group">
+            <label for="fieldName">お名前<span class="form-optional">任意</span></label>
+            <input class="form-input" type="text" id="fieldName" placeholder="例：山田 太郎" maxlength="50">
+            <p class="form-hint">50文字以内</p>
+          </div>
+
+          <div class="form-group">
+            <label for="fieldEmail">メールアドレス<span class="form-optional">任意・返信が必要な場合</span></label>
+            <input class="form-input" type="email" id="fieldEmail" placeholder="例：example@email.com">
+          </div>
+
+          <button class="form-submit" type="submit" id="submitBtn">送信する</button>
+        </div>
+      </form>
+
+      <div class="form-status" id="formStatus" role="alert"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  © 2026 グラデーションサムネメーカー ・ 無料で使えるOGP・サムネイル画像作成ツール
+</footer>
+
+<script type="module" src="/src/contact.js"></script>
+</body>
+</html>

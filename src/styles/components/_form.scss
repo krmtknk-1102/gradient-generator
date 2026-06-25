@@ -1,0 +1,171 @@
+@use '../variables' as *;
+
+// ===== お問い合わせページ =====
+.contact-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.contact-card {
+  background: var(--panel-bg);
+  border: 0.5px solid var(--border);
+  border-radius: $radius-lg;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+// ===== フォーム =====
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    color: var(--text-secondary);
+
+    .form-required {
+      color: #e05a5a;
+      margin-left: 4px;
+      font-size: 11px;
+    }
+
+    .form-optional {
+      color: var(--text-tertiary);
+      margin-left: 4px;
+      font-size: 11px;
+    }
+  }
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 0.5px solid var(--border);
+  border-radius: $radius-md;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-family: 'Noto Sans JP', -apple-system, sans-serif;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-hover);
+    outline-offset: 2px;
+  }
+}
+
+select.form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23909090' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.form-hint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+// ===== 送信ボタン =====
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Noto Sans JP', -apple-system, sans-serif;
+  color: var(--panel-bg);
+  background: var(--text-primary);
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+// ===== 送信結果 =====
+.form-status {
+  display: none;
+  padding: 1rem 1.25rem;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  &.is-success {
+    display: block;
+    background: #edf7f2;
+    border: 0.5px solid #6dbf9a;
+    color: #2d7a55;
+  }
+
+  &.is-error {
+    display: block;
+    background: #fdf2f2;
+    border: 0.5px solid #e0a0a0;
+    color: #9b3535;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .form-status {
+      &.is-success {
+        background: #1a3328;
+        border-color: #3d8c65;
+        color: #7dd4a8;
+      }
+      &.is-error {
+        background: #331a1a;
+        border-color: #8c3d3d;
+        color: #d47d7d;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .form-status {
+    &.is-success {
+      background: #1a3328;
+      border-color: #3d8c65;
+      color: #7dd4a8;
+    }
+    &.is-error {
+      background: #331a1a;
+      border-color: #8c3d3d;
+      color: #d47d7d;
+    }
+  }
+}
+
