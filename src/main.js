@@ -127,3 +127,8 @@ renderGradThumbs(state)
 redraw(state, canvas)
 setupThemeToggle()
 setupStickyNav()
+
+document.querySelector('.site-nav-logo')?.addEventListener('click', (e) => {
+  e.preventDefault()
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+})

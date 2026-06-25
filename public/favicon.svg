@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="14.64466094067262%" y1="14.644660940672626%" x2="85.35533905932738%" y2="85.35533905932738%">
+      <stop offset="0%" stop-color="#cac5d9"/><stop offset="20%" stop-color="#d9c4d0"/><stop offset="40%" stop-color="#d9cab7"/><stop offset="60%" stop-color="#c4d8c6"/><stop offset="80%" stop-color="#b7d8d2"/><stop offset="100%" stop-color="#b7ccd9"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="122.88" ry="122.88" fill="url(#g)"/>
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="central"
+        font-family="'Space Grotesk', system-ui, -apple-system, sans-serif"
+        font-weight="700" font-size="236" letter-spacing="-7"
+        fill="#3a3550">gg</text>
+</svg>
